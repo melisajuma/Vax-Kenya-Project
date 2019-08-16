@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Main navigation -->
+    <header>
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-12 mb-4 white-text text-center">
+                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 animated fadeInDown slow" data-wow-delay="0.3s" >VaxKenya</h1>
+                        <hr class="hr-light my-4 animated fadeInDown slow" >
+
+                        <h5 class="text-uppercase mb-4 white-text animated fadeInDown slower delay-1s" data-wow-delay="0.4s">Working With Small Miracles Everyday</h5>
+                            
+                        <a class="btn btn-outline-white animated fadeInDown delay-2s slower" href="{{ url_for('auth.login') }}">GET IMMUNIZATION SCHEDULE </a>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+
+        <!-- Full Page Intro -->
+        <div>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="https://www.yorkmedicalclinic.com/uploads/1/0/3/8/103831522/shutterstock-1268757544_orig.jpg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=900"  style="background-image:  background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                        <div class="carousel-caption">
+                            <h3><font size="9" color="black">PASSION</font></h3>
+                            <p><font size="5" color="black">A passion for putting patients first</font></p>
+                        </div> 
+                    </div>
+
+                    <div class="carousel-item">
+                    <img src="https://d3cy9zhslanhfa.cloudfront.net/media/22256AF8-8192-4747-B83E40AA38F16FE0/B1EBAE1D-D854-4A95-B1FAB2388465AAE9/00F2C275-2ED0-4798-9E8DCD39DEE21C1C/Drupal-Web_JRBX9310.jpg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=900"  style="background-image:  background-repeat: no-repeat; background-size: cover; background-position: center center;">  
+                        <div class="carousel-caption">
+                            <h3><font size="9" color="black">SPIRIT</font></h3>
+                            <p><font size="5" color="black">The spirit to care: The skill to heal</font></p>
+                        </div> 
+                    </div>
+
+                    <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/734541/pexels-photo-734541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=450&w=900" style="background-image:  background-repeat: no-repeat; background-size: cover; background-position: center center;">
+                        <div class="carousel-caption">
+                            <h3><font size="9"  color="black">CHOOSE WELL</font></h3>
+                            <p><font size="5" color="black">By choosing you!</font></p>
+                        </div> 
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                </div>
+                
+            </div>
+            <!-- Full Page Intro -->
+            
+
+        
+        </div>
+
+
+           
+    </header>
+
+
+    <!-- Main navigation -->
+{% endblock %}
