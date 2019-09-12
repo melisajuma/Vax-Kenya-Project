@@ -4,17 +4,20 @@ from flask_login import UserMixin
 from sqlalchemy import func
 from . import login_manager
 from datetime import datetime
+
+
 class User(UserMixin,db.Model):
     __tablename__ = 'mothers'
     
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(100))
     email = db.Column(db.String(100),unique = True,index = True)
-    id_no = db.Column(db.Integer(8),db.ForeignKey("mothers.id"))
-    password_hash = db.Column(db.String(100))
+    # id_no = db.Column(db.Integer(8),db.ForeignKey("mothers.id"))
+    # password_hash = db.Column(db.String(100))
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String(255))
-    child = db.relationship('Child', backref = 'user',lazy = 'dynamic')
+    # child = db.relationship('Child', backref = 'user',lazy = 'dynamic')
+    password = db.Column(db.String(100))
     # vaccine = db.relationship('Vaccine',backref = 'user',lazy = 'dynamic')
     
     @property
@@ -26,7 +29,9 @@ class User(UserMixin,db.Model):
     def verify_password(self, password):
         return check_password_hash(self.password_hash,password)
     def __repr__(self):
-        return f'User {self.username}'    
+        return f'User {self.username}'
+
+
 class Child(db.Model):
     __tablename__ = 'child'
     id = db.Column(db.Integer,primary_key = True)
